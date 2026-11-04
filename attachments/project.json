@@ -1,0 +1,113 @@
+{
+  "project": {
+    "name": "PROMPT",
+    "fullName": "PROMPT – Music Analyzer & Suno Prompt Synthesizer",
+    "version": "1.0.0",
+    "type": "PWA",
+    "platform": "Grok Build",
+    "created": "2026-11-03",
+    "language": "vi",
+    "targetDevice": "Samsung Galaxy A56 5G (1080x2340, 9:19.5)",
+    "standards": [
+      "BULONL",
+      "NGAME",
+      "DSPSS",
+      "PWAMC",
+      "CU2/13",
+      "LOA1+LOA2+LOA3",
+      "DoD Navy/Gold",
+      "PayPal Hosted Button T7AZ748Y27248"
+    ]
+  },
+  "description": "PWA phân tích nhạc upload đa định dạng, trích xuất style, tổng hợp prompt Suno AI ~995 ký tự (tối thiểu 4 phút), và AI kiểm soát chất lượng catchiness + trending.",
+  "features": [
+    {
+      "id": "analyze",
+      "name": "Phân tích chuyên sâu nhạc",
+      "description": "Upload MP3/WAV/FLAC/OGG/M4A. Web Audio API decode: thời lượng, sample rate, channels, energy/RMS, waveform. BPM/key/structure/loudness ước tính (mô phỏng librosa/essentia)."
+    },
+    {
+      "id": "copy",
+      "name": "AI Copy / Style Transfer",
+      "description": "Trích xuất style/mood/instrumentation từ phân tích. Chỉnh sửa và copy style prompt. Dựa trên open-source concepts (librosa-style + AI recreation)."
+    },
+    {
+      "id": "suno_prompt",
+      "name": "Tổng hợp Prompt Suno",
+      "description": "Tạo style prompt tiếng Anh ~995 ký tự (dưới giới hạn 1000 của Suno V4.5+/V5/V6). Cấu trúc đầy đủ [Intro][Verse][Pre-Chorus][Chorus][Bridge][Outro] + lyrics template để đạt tối thiểu 4 phút."
+    },
+    {
+      "id": "qc",
+      "name": "AI Khách hàng QC",
+      "description": "Scoring catchiness (hook), trending potential 2026, length suitability, coherence. Đảm bảo siêu cuốn và trending."
+    },
+    {
+      "id": "cu213",
+      "name": "CU 2/13",
+      "description": "Panel tiện ích thường trực: TV Việt HLS, Radio Browser VN, EPUB+OCR, Thu âm, Mastering JP, Bản đồ MapLibre, Morse, Thời tiết, Tỉ giá, Âm lịch."
+    }
+  ],
+  "ui": {
+    "theme": "DoD Navy/Gold",
+    "colors": {
+      "navy": "#002F6C",
+      "navyDark": "#001F4A",
+      "gold": "#E8B00F",
+      "goldBright": "#FFB81C",
+      "bg": "#0A1628",
+      "card": "#0F2340"
+    },
+    "fonts": ["Oswald", "Lato"],
+    "layout": "Full screen 9:19.5, tabs, gold borders",
+    "locks": ["no zoom", "no select", "no translate suggestion"]
+  },
+  "files": [
+    {
+      "path": "index.html",
+      "type": "html",
+      "size": 18797,
+      "description": "Main PWA application"
+    },
+    {
+      "path": "manifest.json",
+      "type": "json",
+      "size": 346,
+      "description": "PWA manifest"
+    },
+    {
+      "path": "sw.js",
+      "type": "javascript",
+      "size": 235,
+      "description": "Service Worker"
+    },
+    {
+      "path": "sample_suno_prompt_995.txt",
+      "type": "text",
+      "size": 995,
+      "description": "Sample Suno style prompt exactly 995 characters"
+    },
+    {
+      "path": "README.md",
+      "type": "markdown",
+      "size": 575,
+      "description": "Project readme"
+    },
+    {
+      "path": "project.json",
+      "type": "json",
+      "description": "This project definition file"
+    }
+  ],
+  "paypal": {
+    "hostedButtonId": "T7AZ748Y27248",
+    "clientId": "BAAIfuQli_a3Qud-8CIRqCRCeohqtiW29_i2Txx2rQM35pqMc-pbCIZX6L8tx1zbyOj_vp8AUE_dpSqOhc",
+    "currency": "USD"
+  },
+  "run": {
+    "local": "python3 -m http.server 8080",
+    "url": "http://localhost:8080",
+    "direct": "Open index.html in browser"
+  },
+  "status": "Ready - basic structure tested",
+  "notes": "CU2/13 panel is placeholder following memory standards. Full spectral analysis can be extended with WASM ports of librosa/essentia. Prompt generation targets Suno style box limit of 1000 characters on modern models."
+}

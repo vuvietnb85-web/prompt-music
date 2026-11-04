@@ -1,0 +1,38 @@
+{
+  "url": "http://127.0.0.1:8081/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "PROMPT",
+      "hasCanvas": false,
+      "bodyTextLen": 521,
+      "bodyTextHash": "869f7f0538cb1f4954151b62ca4bf6efff63989f3b51f3ca6b5ea9e9b8fab13b",
+      "bodyTextPrefix": "L R PROMPT Lời Việt trong sáng · Suno không hát hướng dẫn ĐÃ LƯU",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "PROMPT",
+      "hasCanvas": false,
+      "bodyTextLen": 553,
+      "bodyTextHash": "0f6d01aebe4420a96e4ea26855e2cc7ac1381c0c9c7666b46ae6c1eae994f59e",
+      "bodyTextPrefix": "L R PROMPT Lời Việt trong sáng · Suno không hát hướng dẫn ĐÃ LƯU",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-built.json",
+  "divergesFromBaseline": false,
+  "baselineReasons": []
+}
